@@ -13,6 +13,7 @@ namespace GradeBook
         public StudentType Type { get; set; }
         public EnrollmentType Enrollment { get; set; }
         public List<double> Grades { get; set; }
+
         [JsonIgnore]
         public double AverageGrade
         {
@@ -21,8 +22,10 @@ namespace GradeBook
                 return Grades.Average();
             }
         }
+
         [JsonIgnore]
         public char LetterGrade { get; set; }
+        
         [JsonIgnore]
         public double GPA { get; set; }
 
